@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="handlebars.js"></script>
+
+
+    <style media="screen">
+      body {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      }
+
+      #container {
+        width:1000px;
+        margin:auto;
+        margin-top:50px;
+      }
+
+      #tweet-seach-form {
+        width:500px;
+        margin:auto;
+        margin-top:50px;
+      }
+
+      #tweet-seach-input {
+        font-size:3rem;
+        border:3px solid #2d72fc;
+        color: #000000;
+      }
+
+      #tweet-logo {
+        width:300px;
+        margin-left:330px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .tweet-container {
+        float:left;
+        width:250px;
+        margin:auto;
+      }
+
+      .center-text {
+        text-align: center;
+      }
+
+      .flip-image {
+        color:#2d72fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form id="tweet-seach-form" class="" action="" method="">
+        <input id="tweet-seach-input" type="text" name="" value="andypiper">
+        <input id="tweet-seach-submit" type="submit" name="search" value="Search">
+      </form>
+
+      <div id="tweet-container">
+        <script id="tweets-template" type="text/x-handlebars-template">
+            {{#each tweets}}
+            <div>
+                <img src="{{img_url}}}" />
+            </div>
+            {{/each}}
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
